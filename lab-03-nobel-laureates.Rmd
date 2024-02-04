@@ -295,6 +295,8 @@ ggplot(data = nobel_living_science, aes(y=country_us)) +
 4.  Create a new variable called `born_country_us` that has the value `"USA"` if the laureate is born in the US, and `"Other"` otherwise.
     How many of the winners are born in the US?
 
+***There were 123 winners born in the US.***
+
 ```{r}
 nobel_living_science <- nobel_living_science %>%
   mutate(
@@ -309,6 +311,8 @@ nobel_living_science %>%
 5.  Add a second variable to your visualization from Exercise 3 based on whether the laureate was born in the US or not.
     Based on your visualization, do the data appear to support Buzzfeed's claim?
     Explain your reasoning in 1-2 sentences.
+
+***From what I can see, the data appears to be similar, but I dont think buzzfeeds is entirely accurate compared to the one below.***
 
     -   Your final visualization should contain a facet for each category.
     -   Within each facet, there should be a bar for whether the laureate won the award in the US or not.
