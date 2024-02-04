@@ -270,6 +270,15 @@ This means you'll need to define this data frame in your R Markdown document, ev
 
 3.  Create a faceted bar plot visualizing the relationship between the category of prize and whether the laureate was in the US when they won the nobel prize.
     Interpret your visualization, and say a few words about whether the Buzzfeed headline is supported by the data.
+    
+```{r}
+library(ggplot2)
+
+ggplot(data = nobel_living_science, aes(y=country_us)) +
+  geom_bar() +
+  facet_wrap(~category)
+```
+
 
     -   Your visualization should be faceted by category.
     -   For each facet you should have two bars, one for winners in the US and one for Other.
